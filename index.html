@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>  
+    <head><title>Time table</title></head>
+    <body>
+        <h3>time table</h3>
+        <table border="5">
+            <tr>
+                <td align="center" height="50" 
+                width="100">Period/Day</td>
+                <td align="center" height="50" 
+                width="100">Monday</td>
+                <td align="center" height="50" 
+                width="100">Tuesday</td>
+                <td align="center" height="50" 
+                width="100">Wednesday</td>
+                <td align="center" height="50" 
+                width="100">Thursday</td>
+                <td align="center" height="50" 
+                width="100">Friday</td>
+                <td align="center" height="50" 
+                width="100">Saturday</td>
+                <td align="center" height="50" 
+                width="100">Sunday</td>
+            </tr>
+            <tr><td align="center" height="50" 
+                width="100">8:30 AM - 9:45 AM</td>
+            <td colspan="7" align="center" height="50" 
+            width="100" ><strong>Daily morning routine</strong>(freshen up, drink 2 glass of water, a lil bit dtreching, meditation if possible and definately breakfast is a must).</td>
+            </tr>
+            <tr><td align="center" height="50" 
+                width="100">9:45 AM - 10:00 AM</td>
+            <td colspan="7" align="center" height="50" 
+            width="100" ><strong>Preparation for class</strong>(it is very imporatant to sit on a chair ,keep your device on a table and arrange your stationary). </td>
+            </tr>
+            <tr><td align="center" height="50" 
+                width="100">10:00 AM - 2:30 PM</td>
+            <td colspan="7" align="center" height="50" 
+            width="100" ><strong>Online classes</strong>(keep notification turned off, prepare a distraction list that you can attend later and most imporatantly keep your back straight,core strong)</td>
+            </tr>
+            <tr><td align="center" height="50" 
+                width="100">2:30 PM - 3:30 PM</td>
+            <td colspan="7" align="center" height="50" 
+            width="100" ><strong>Quick revision</strong>(Quickly go over what has been taught and consolidate assignment).</td>
+            </tr>
+            <tr><td align="center" height="50" 
+                width="100">3:30 PM - 5:30 PM</td>
+            <td colspan="7" align="center" height="50" 
+            width="100" ><strong>Chill</strong></td>
+            </tr>
+            <tr><td align="center" height="50" 
+                width="100">5:30 PM - 8:00 PM</td>
+            <td colspan="7" align="center" height="50" 
+            width="100" ><strong>Self study</strong></td>
+            </tr>
+            <tr><td align="center" height="50" 
+                width="100">8:00 PM - 9:00 PM</td>
+            <td colspan="7" align="center" height="50" 
+            width="100" ><strong>Gym/walk/outdoor game</strong></td>
+            </tr>
+        </table>
+        <p id="quote"></p>
+        <script>
+            const quote = document.querySelector('#quote');
+            fetch('http://api.quotable.io/random')
+            .then(res => res.json())
+            .then(data=>{
+                quote.innerHTML=`"${data.content}"`;
+            })
+        </script>
+    </body>
+</html>
